@@ -1,0 +1,10 @@
+id,name,country,contact_email,phone
+S01,Sony Electronics,Japan,supplier@sony.com,+1-800-222-7669
+S02,Apple Inc.,USA,supplier@apple.com,+1-800-275-2273
+S03,Samsung Electronics,South Korea,supplier@samsung.com,+1-800-726-7864
+S04,LG Electronics,South Korea,supplier@lg.com,+1-800-243-0000
+S05,Dell Technologies,USA,supplier@dell.com,+1-800-289-3355
+S06,ASUS Computer,Taiwan,supplier@asus.com,+1-888-678-3688
+S07,Google LLC,USA,supplier@google.com,+1-650-253-0000
+S08,Microsoft Corporation,USA,supplier@microsoft.com,+1-800-642-7676
+S09,Nintendo Co. Ltd,Japan,supplier@nintendo.com,+1-800-255-3700

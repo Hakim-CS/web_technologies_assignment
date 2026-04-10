@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechNova Product Gallery — Browse our collection of electronics product images." />
+  <title>TechNova | Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Tech<span>Nova</span></a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">🏠 Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">📦 Shop</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="category.html">💻 Laptops</a></li>
+              <li><a class="dropdown-item" href="category.html">🎧 Audio</a></li>
+              <li><a class="dropdown-item" href="category.html">📱 Smartphones</a></li>
+              <li><a class="dropdown-item" href="category.html">📺 TVs</a></li>
+              <li><a class="dropdown-item" href="category.html">🎮 Gaming</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="category.html">All Categories</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="product.html">🔍 Product</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">🖼️ Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="add-item.html">➕ Add Item</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main class="py-4">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">🖼️ Gallery</li>
+        </ol>
+      </nav>
+
+      <h1>🖼️ Product Gallery</h1>
+      <p class="lead mb-4">A visual collection of our electronics. Browse <i>headphones, laptops, smartphones, TVs</i> and more.</p>
+
+      <hr />
+
+      <!-- Audio — Bootstrap Grid -->
+      <section class="mt-4">
+        <h2 class="mb-3">🎧 Audio</h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80" alt="Sony WH-1000XM5" />
+              <div class="overlay"><p>Sony WH-1000XM5</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=400&q=80" alt="Apple AirPods Pro" />
+              <div class="overlay"><p>Apple AirPods Pro 2</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&q=80" alt="Premium Headphones" />
+              <div class="overlay"><p>Bose QC45</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&q=80" alt="Galaxy Buds" />
+              <div class="overlay"><p>Samsung Galaxy Buds</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Laptops -->
+      <section class="mt-4">
+        <h2 class="mb-3">💻 Laptops</h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&q=80" alt="MacBook Pro" />
+              <div class="overlay"><p>Apple MacBook Pro</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80" alt="Dell XPS" />
+              <div class="overlay"><p>Dell XPS 15</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80" alt="ASUS ROG" />
+              <div class="overlay"><p>ASUS ROG Gaming</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80" alt="Laptop in use" />
+              <div class="overlay"><p>Laptop in Action</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Smartphones & TVs -->
+      <section class="mt-4">
+        <h2 class="mb-3">📱 Smartphones &amp; 📺 TVs</h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&q=80" alt="iPhone 15 Pro" />
+              <div class="overlay"><p>iPhone 15 Pro</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&q=80" alt="Samsung Galaxy" />
+              <div class="overlay"><p>Samsung Galaxy S24</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=400&q=80" alt="Smart TV" />
+              <div class="overlay"><p>Samsung QLED TV</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1461151304267-38535e780c79?w=400&q=80" alt="LG OLED" />
+              <div class="overlay"><p>LG OLED TV</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Gaming -->
+      <section class="mt-4 mb-5">
+        <h2 class="mb-3">🎮 Gaming</h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=400&q=80" alt="PS5" />
+              <div class="overlay"><p>Sony PlayStation 5</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1621259182978-fbf93132d53d?w=400&q=80" alt="Xbox" />
+              <div class="overlay"><p>Xbox Series X</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=400&q=80" alt="Nintendo Switch" />
+              <div class="overlay"><p>Nintendo Switch OLED</p></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&q=80" alt="Gaming Setup" />
+              <div class="overlay"><p>Gaming Setup</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-4 mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="navbar-brand p-0" style="font-size:1.2rem;">Tech<span>Nova</span></h5>
+          <p>Your premier online electronics store.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="text-white mb-2">Quick Links</h6>
+          <ul class="icon-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="add-item.html">Add Product</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="text-white mb-2">Data Files</h6>
+          <ul class="icon-list">
+            <li><a href="data/items.txt" target="_blank">items.txt</a></li>
+            <li><a href="data/suppliers.txt" target="_blank">suppliers.txt</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <p class="text-center mb-0">&copy; 2026 <b>TechNova</b>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

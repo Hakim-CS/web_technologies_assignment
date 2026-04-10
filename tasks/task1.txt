@@ -1,0 +1,41 @@
+a) Project selection and data preparation
+
+Prepare a plan for a web application for an online store.  You can choose the domain by yourself. On the basis of the idea, create two or more temporary TXT files that will contain pre-prepared data.
+
+Example of a list of items; Write product data in a TXT format (items.txt). Include: id item, article name, price of item, supplier of item (its ID), date of last purchase ...
+b) Preparation of HTML
+
+Create HTML pages that simulate your web application, where you include:
+
+the structure of web pages with structural HTML tags such as header, nav, footer, main, aside, article, and section.
+a start page with links to stored data, product categories, and a collection of best-selling products (use as many HTML tags as possible, but at least h1, h2, p, br, hr, a, table, img, b, i, ul)
+a page representing the selected category of products - on it, there should be basic information about the category, a list of products in the category, etc.
+a page representing product details (name, description, price, other properties, product image, etc.)
+a gallery of pictures you plan to use
+c) Using forms 
+
+Add a page that will allow you to add an item to your online store. In doing so, enable the entry of basic parameters (name, description, price, etc.) using as many HTML elements as possible (input field, larger input field, drop-down list, selections, etc.). Check which fields are required; Include validation if the required fields are not filled in. 
+
+d) CSS styles - simple
+
+Add styles to existing web sites. Insert styles in a separate file and include them in all HTML files. Change following elements:
+
+text color,
+background color,
+borders,
+color of buttons,
+transparency of elements,
+margin and padding properties
+Use the class and id selectors.
+
+e) CSS extended
+
+Try combining selectors (eg, re-define an item <p> with a certain class, etc.).
+
+Include following styles:
+
+a single menu (the menu response to the transition with the mouse, make sure it is clear which page is currently selected etc.),
+own icons next to lists,
+own font (font),
+define the links (response to the transition with the mouse, specify the appearance of the links already visited),
+style of your choice.

@@ -1,0 +1,7 @@
+Upgrade your existing websites (online store) with Node.js back-end technology. Implement the following functionalities:
+
+- Login: Simulate user login. When you click on the login button, send the information to the server (via the POST method). On the server side (backend) check for such user and return the ID of the successfully logged in user in response. Save the obtained user id in sessionStorage. For unsuccessful login, return the response with corresponding error code.
+
+- Product loading: the basic product offer should be downloaded from the server (use the GET method). Show products in a "dynamic table" upon successful load.
+
+- Product adding: after submitting a new product using the form, send the data to the server (use the POST method). Add the new product to the list of products.

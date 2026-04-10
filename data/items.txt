@@ -1,0 +1,16 @@
+id,name,price,supplier_id,category,stock,date_last_purchase
+1,Sony WH-1000XM5 Headphones,349.99,S01,Audio,42,2026-03-15
+2,Apple AirPods Pro 2nd Gen,249.99,S02,Audio,78,2026-03-28
+3,Samsung 65" QLED 4K TV,1299.99,S03,TVs,15,2026-02-20
+4,LG C3 55" OLED TV,999.99,S04,TVs,9,2026-03-10
+5,Apple MacBook Pro 14" M3,1999.99,S02,Laptops,23,2026-03-22
+6,Dell XPS 15 Laptop,1749.99,S05,Laptops,17,2026-03-05
+7,ASUS ROG Gaming Laptop,1499.99,S06,Laptops,11,2026-02-18
+8,Apple iPhone 15 Pro,1099.99,S02,Smartphones,55,2026-04-01
+9,Samsung Galaxy S24 Ultra,1199.99,S03,Smartphones,48,2026-03-30
+10,Google Pixel 8 Pro,999.99,S07,Smartphones,31,2026-03-18
+11,iPad Pro 12.9" M2,1099.99,S02,Tablets,29,2026-03-25
+12,Samsung Galaxy Tab S9,849.99,S03,Tablets,20,2026-02-28
+13,Sony PlayStation 5,499.99,S01,Gaming,35,2026-04-02
+14,Xbox Series X,499.99,S08,Gaming,28,2026-03-14
+15,Nintendo Switch OLED,349.99,S09,Gaming,60,2026-01-30

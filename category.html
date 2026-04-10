@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse Laptops at TechNova - MacBook Pro, Dell XPS, ASUS ROG and more." />
+  <title>TechNova | Laptops</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Tech<span>Nova</span></a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">🏠 Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">📦 Shop</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="category.html">💻 Laptops</a></li>
+              <li><a class="dropdown-item" href="category.html">🎧 Audio</a></li>
+              <li><a class="dropdown-item" href="category.html">📱 Smartphones</a></li>
+              <li><a class="dropdown-item" href="category.html">📺 TVs</a></li>
+              <li><a class="dropdown-item" href="category.html">🎮 Gaming</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="category.html">All Categories</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="product.html">🔍 Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">🖼️ Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="add-item.html">➕ Add Item</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main class="py-4">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">💻 Laptops</li>
+        </ol>
+      </nav>
+
+      <!-- Bootstrap Alert -->
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        💡 <strong>Tip:</strong> All laptops come with a <b>2-year warranty</b> and free delivery.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <!-- Bootstrap Grid: main + sidebar -->
+      <div class="row g-4">
+
+        <!-- MAIN CONTENT -->
+        <div class="col-lg-9">
+          <article>
+            <h1>💻 Laptops</h1>
+            <p class="lead">Discover our curated selection of premium laptops — from ultra-thin ultrabooks to powerful workstations and gaming rigs.</p>
+            <hr />
+
+            <h2>About This Category</h2>
+            <p>Our <b>Laptops</b> category features <i>over 30 models</i> from the world's leading manufacturers. Every laptop is <b>tested</b>, <b>certified</b>, and covered by a <i>2-year warranty</i>.</p>
+
+            <ul class="check-list mt-2 mb-4">
+              <li>Verified <b>original products</b> from authorized dealers</li>
+              <li>Specs checked and <b>quality-certified</b></li>
+              <li><b>Free returns</b> within 30 days of purchase</li>
+              <li>All models include <i>manufacturer warranty</i></li>
+            </ul>
+
+            <hr />
+            <h2 class="mb-3">Products in This Category</h2>
+
+            <!-- Bootstrap Grid for products -->
+            <div class="row g-4 mb-4">
+              <div class="col-sm-6 col-xl-4">
+                <div class="product-card h-100">
+                  <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&q=80" alt="MacBook Pro" />
+                  <div class="p-3">
+                    <span class="badge bg-primary mb-1">Apple</span>
+                    <h5><b>MacBook Pro 14" M3</b></h5>
+                    <i class="text-muted" style="font-size:0.85rem;">Apple Silicon · 18GB · 512GB</i>
+                    <p class="price mt-2">$1,999.99</p>
+                    <a href="product.html" class="btn btn-primary btn-sm w-100">View Details</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-xl-4">
+                <div class="product-card h-100">
+                  <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80" alt="Dell XPS 15" />
+                  <div class="p-3">
+                    <span class="badge bg-success mb-1">Dell</span>
+                    <h5><b>Dell XPS 15</b></h5>
+                    <i class="text-muted" style="font-size:0.85rem;">Intel i9 · 32GB · 1TB</i>
+                    <p class="price mt-2">$1,749.99</p>
+                    <a href="product.html" class="btn btn-primary btn-sm w-100">View Details</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-xl-4">
+                <div class="product-card h-100">
+                  <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80" alt="ASUS ROG" />
+                  <div class="p-3">
+                    <span class="badge bg-warning text-dark mb-1">Gaming</span>
+                    <h5><b>ASUS ROG Strix G16</b></h5>
+                    <i class="text-muted" style="font-size:0.85rem;">RTX 4080 · 32GB · 1TB</i>
+                    <p class="price mt-2">$1,499.99</p>
+                    <a href="product.html" class="btn btn-primary btn-sm w-100">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr />
+            <h2 class="mb-3">Full Laptops List</h2>
+            <!-- Bootstrap Table -->
+            <div class="table-responsive">
+              <table class="table table-hover table-bordered align-middle">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>CPU</th>
+                    <th>RAM</th>
+                    <th>Price</th>
+                    <th>Supplier</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td><b>MacBook Pro 14" M3</b></td>
+                    <td><i>Apple M3</i></td>
+                    <td>18 GB</td>
+                    <td class="text-accent">$1,999.99</td>
+                    <td>Apple Inc.</td>
+                    <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td><b>Dell XPS 15</b></td>
+                    <td><i>Intel Core i9</i></td>
+                    <td>32 GB</td>
+                    <td class="text-accent">$1,749.99</td>
+                    <td>Dell Technologies</td>
+                    <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td><b>ASUS ROG Gaming Laptop</b></td>
+                    <td><i>Intel i9 + RTX 4080</i></td>
+                    <td>32 GB</td>
+                    <td class="text-accent">$1,499.99</td>
+                    <td>ASUS Computer</td>
+                    <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="col-lg-3">
+          <aside class="sidebar">
+            <h3 class="sidebar-label">All Categories</h3>
+            <ul class="icon-list mb-3">
+              <li><a href="category.html">🎧 Audio</a></li>
+              <li><a href="category.html">📺 TVs</a></li>
+              <li><a href="category.html" style="color:var(--color-primary);">💻 Laptops</a></li>
+              <li><a href="category.html">📱 Smartphones</a></li>
+              <li><a href="category.html">🖥️ Tablets</a></li>
+              <li><a href="category.html">🎮 Gaming</a></li>
+            </ul>
+            <hr />
+            <h3 class="sidebar-label">Price Range</h3>
+            <ul class="icon-list mb-3">
+              <li>Under $500</li>
+              <li>$500 – $1,000</li>
+              <li>$1,000 – $2,000</li>
+              <li>Over $2,000</li>
+            </ul>
+            <hr />
+            <a href="add-item.html" class="btn btn-outline-primary w-100">+ List a Product</a>
+          </aside>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-4 mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="navbar-brand p-0" style="font-size:1.2rem;">Tech<span>Nova</span></h5>
+          <p>Your premier online electronics store.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="text-white mb-2">Quick Links</h6>
+          <ul class="icon-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="add-item.html">Add Product</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="text-white mb-2">Data Files</h6>
+          <ul class="icon-list">
+            <li><a href="data/items.txt" target="_blank">items.txt</a></li>
+            <li><a href="data/suppliers.txt" target="_blank">suppliers.txt</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <p class="text-center mb-0">&copy; 2026 <b>TechNova</b>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

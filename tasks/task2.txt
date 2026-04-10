@@ -1,0 +1,7 @@
+Include Bootrstrap in your website. Add appropriate widgets and customize the design of your website as follows:
+
+use the "Bootstrap Grid System" to work properly on devices of all widths (help)
+add navigation menu with the dropdown functionality (help)
+add footer to the website
+use Bootstrap for the appearance of buttons, input fields, links, titles, text, and tables
+Change the appearance of the alerts

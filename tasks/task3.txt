@@ -1,0 +1,11 @@
+Extend your web pages with JavaScript. Include the following functionalities:
+
+display date and time
+calculate the number of hours, minutes and seconds to the end of the 'happy hour' you offer to sell your products
+validation of the input form (in case the requested fields are empty / too short / too long, the notice should be displayed)
+add a form to calculate membership fees for receiving bonuses in an online store - use different packages (yearly, monthly ...)
+Additionally, fill your web shop with data:
+
+create data with items (at least 5) and their properties (at least 5) (JSON document)
+parse the items from the JSON document into an HTML table
+the reading of the items and the parsing of the JSON document happens every time the page is loaded (action onload())

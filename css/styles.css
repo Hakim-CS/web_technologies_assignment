@@ -1,0 +1,378 @@
+/* ============================================================
+   TechNova Store - Custom Styles (works on top of Bootstrap 5)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@700;800&display=swap');
+
+/* --- CSS Variables --- */
+:root {
+  --color-bg:        #0d0f1a;
+  --color-surface:   #141726;
+  --color-surface2:  #1c2038;
+  --color-border:    #2a2f4a;
+  --color-primary:   #6c63ff;
+  --color-accent:    #00d4ff;
+  --color-text:      #e2e8f0;
+  --color-muted:     #8892a4;
+  --color-success:   #22c55e;
+  --color-warning:   #f59e0b;
+  --color-danger:    #ef4444;
+}
+
+/* --- Base --- */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* --- Headings (req d/e - own font) --- */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sora', sans-serif;
+  color: #ffffff;
+}
+
+/* ============================================================
+   BOOTSTRAP OVERRIDES — Dark Theme
+   ============================================================ */
+
+/* Navbar */
+.navbar {
+  background-color: var(--color-surface) !important;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-brand {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff !important;
+}
+
+.navbar-brand span { color: var(--color-primary); }
+
+.nav-link {
+  color: var(--color-muted) !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+/* Navbar hover (req e - menu response to mouse) */
+.nav-link:hover,
+.nav-link:focus {
+  color: #fff !important;
+}
+
+/* Currently active page (req e - clear which page is selected) */
+.nav-link.active {
+  color: var(--color-primary) !important;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  background-color: var(--color-surface2);
+  border: 1px solid var(--color-border);
+}
+
+.dropdown-item {
+  color: var(--color-text);
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-border);
+  color: #fff;
+}
+
+/* --- Buttons (req d - button color) --- */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: #5148d4;
+  border-color: #5148d4;
+}
+
+.btn-outline-primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* --- Cards / Surfaces --- */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.card-header {
+  background-color: var(--color-surface2);
+  border-bottom: 1px solid var(--color-border);
+  color: #fff;
+}
+
+/* --- Tables (req d - borders, background) --- */
+.table {
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.table thead th {
+  background-color: var(--color-surface2);
+  color: var(--color-primary);
+  border-color: var(--color-border);
+}
+
+.table tbody tr {
+  border-color: var(--color-border);
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--color-surface2);
+  color: #fff;
+}
+
+/* --- Form Controls (req d/c - input appearance) --- */
+.form-control,
+.form-select {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--color-bg);
+  border-color: var(--color-primary);
+  color: var(--color-text);
+  box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+}
+
+.form-control::placeholder { color: var(--color-muted); }
+.form-label { color: var(--color-text); font-weight: 500; }
+
+/* --- Links (req e - hover + visited) --- */
+a { color: var(--color-accent); }
+a:hover { color: var(--color-primary); }
+a:visited { color: #a78bfa; }
+
+/* ============================================================
+   CUSTOM ALERTS  (req task2 - change appearance of alerts)
+   ============================================================ */
+.alert {
+  border-radius: 8px;
+  font-weight: 500;
+  border-width: 1px;
+}
+
+.alert-success {
+  background-color: rgba(34, 197, 94, 0.12);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.alert-danger {
+  background-color: rgba(239, 68, 68, 0.12);
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.alert-warning {
+  background-color: rgba(245, 158, 11, 0.12);
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+}
+
+.alert-info {
+  background-color: rgba(0, 212, 255, 0.12);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero {
+  background: linear-gradient(135deg, #1a1f3a 0%, #0d0f1a 60%, #1a0f3a 100%);
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero h1 span { color: var(--color-primary); }
+
+/* ============================================================
+   FOOTER (req task2 - footer)
+   ============================================================ */
+footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+footer a { color: var(--color-primary); }
+footer a:hover { color: var(--color-accent); }
+
+/* ============================================================
+   PRODUCT CARD
+   ============================================================ */
+.product-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  opacity: 0.95;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+  border-color: var(--color-primary);
+  opacity: 1;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-card .price {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ============================================================
+   GALLERY
+   ============================================================ */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  border-color: var(--color-primary);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(13,15,26,0.85), transparent);
+  padding: 0.6rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.gallery-item:hover .overlay { opacity: 1; }
+.gallery-item .overlay p { color: #fff; margin: 0; font-size: 0.85rem; font-weight: 600; }
+
+/* ============================================================
+   CATEGORY CARD
+   ============================================================ */
+.category-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text);
+  display: block;
+  transition: all 0.2s;
+}
+
+.category-card:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-surface2);
+  color: #fff;
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.category-card .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+
+/* ============================================================
+   LISTS WITH CUSTOM ICONS (req e)
+   ============================================================ */
+ul.icon-list { list-style: none; padding: 0; }
+ul.icon-list li { padding: 0.35rem 0 0.35rem 1.6rem; position: relative; }
+ul.icon-list li::before {
+  content: '▶';
+  position: absolute; left: 0;
+  color: var(--color-primary);
+  font-size: 0.65rem;
+  top: 50%; transform: translateY(-50%);
+}
+
+ul.check-list { list-style: none; padding: 0; }
+ul.check-list li { padding: 0.35rem 0 0.35rem 1.8rem; position: relative; }
+ul.check-list li::before {
+  content: '✔';
+  position: absolute; left: 0;
+  color: var(--color-success);
+  font-size: 0.85rem;
+}
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+.breadcrumb-item a { color: var(--color-muted); }
+.breadcrumb-item.active { color: var(--color-primary); }
+.breadcrumb-item + .breadcrumb-item::before { color: var(--color-border); }
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+.sidebar {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.sidebar-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-muted);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================================
+   MISC UTILITIES
+   ============================================================ */
+.text-accent { color: var(--color-accent) !important; }
+.text-primary-custom { color: var(--color-primary) !important; }
+.price { color: var(--color-accent); font-weight: 700; font-size: 1.1rem; }
+.badge-custom { background-color: rgba(108,99,255,0.2); color: var(--color-primary); }
+
+p.lead { color: var(--color-text); }
+p { color: var(--color-muted); }
+
+hr { border-color: var(--color-border); }
+
+/* product detail */
+.price-big { font-size: 2rem; font-weight: 800; color: var(--color-accent); display: block; margin: 0.75rem 0; }

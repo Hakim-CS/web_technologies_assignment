@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechNova - Your premier online electronics store." />
+  <title>TechNova | Home</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom Styles (dark theme override) -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR with Dropdown (task2 req) ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Tech<span>Nova</span></a>
+
+      <!-- Hamburger for small screens (Bootstrap Grid / responsive) -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">🏠 Home</a>
+          </li>
+
+          <!-- Dropdown Menu (task2 req) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              📦 Shop
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="category.html">💻 Laptops</a></li>
+              <li><a class="dropdown-item" href="category.html">🎧 Audio</a></li>
+              <li><a class="dropdown-item" href="category.html">📱 Smartphones</a></li>
+              <li><a class="dropdown-item" href="category.html">📺 TVs</a></li>
+              <li><a class="dropdown-item" href="category.html">🎮 Gaming</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="category.html">All Categories</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">🔍 Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">🖼️ Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="add-item.html">➕ Add Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO — Bootstrap Grid ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-bold mb-3">Next-Gen Tech<br /><span>at Your Fingertips</span></h1>
+          <p class="lead mb-4">Discover the latest laptops, smartphones, TVs, and gaming gear from the world's leading brands — all in one place.</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="category.html" class="btn btn-primary">Shop Now</a>
+            <a href="gallery.html" class="btn btn-outline-primary">View Gallery</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="py-4">
+    <div class="container">
+
+      <!-- Bootstrap Alert (task2 req — custom alert appearance) -->
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        🎉 Free shipping on all orders over <strong>$50</strong>! Limited time offer.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <!-- Data Links — Bootstrap row/col -->
+      <section class="mb-5">
+        <h2 class="mb-3">📂 Store Data Files</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="card h-100 p-3">
+              <h5>📄 items.txt</h5>
+              <p>Full product inventory — ID, name, price, supplier, date.</p>
+              <a href="data/items.txt" target="_blank" class="btn btn-outline-primary btn-sm">Open File</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 p-3">
+              <h5>📄 suppliers.txt</h5>
+              <p>Supplier directory — ID, name, country, contact info.</p>
+              <a href="data/suppliers.txt" target="_blank" class="btn btn-outline-primary btn-sm">Open File</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories — Bootstrap Grid -->
+      <section class="mb-5">
+        <h2 class="mb-3">🗂️ Product Categories</h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="category.html" class="category-card">
+              <div class="icon">🎧</div>
+              <strong>Audio</strong>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="category.html" class="category-card">
+              <div class="icon">📺</div>
+              <strong>TVs</strong>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="category.html" class="category-card">
+              <div class="icon">💻</div>
+              <strong>Laptops</strong>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="category.html" class="category-card">
+              <div class="icon">📱</div>
+              <strong>Smartphones</strong>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="category.html" class="category-card">
+              <div class="icon">🖥️</div>
+              <strong>Tablets</strong>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="category.html" class="category-card">
+              <div class="icon">🎮</div>
+              <strong>Gaming</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Best Sellers — Bootstrap Grid + table -->
+      <section class="mb-5">
+        <h2 class="mb-3">🏆 Best-Selling Products</h2>
+
+        <!-- Products Grid -->
+        <div class="row g-4 mb-4">
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card h-100">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80" alt="Sony WH-1000XM5" />
+              <div class="p-3">
+                <span class="badge bg-success mb-1">In Stock</span>
+                <h5><b>Sony WH-1000XM5</b></h5>
+                <i class="text-muted" style="font-size:0.85rem;">Noise-Cancelling Headphones</i>
+                <p class="price mt-2">$349.99</p>
+                <a href="product.html" class="btn btn-primary btn-sm w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card h-100">
+              <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&q=80" alt="MacBook Pro" />
+              <div class="p-3">
+                <span class="badge bg-primary mb-1">New</span>
+                <h5><b>MacBook Pro 14" M3</b></h5>
+                <i class="text-muted" style="font-size:0.85rem;">Apple Silicon Laptop</i>
+                <p class="price mt-2">$1,999.99</p>
+                <a href="product.html" class="btn btn-primary btn-sm w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card h-100">
+              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&q=80" alt="iPhone 15 Pro" />
+              <div class="p-3">
+                <span class="badge bg-warning text-dark mb-1">Hot</span>
+                <h5><b>iPhone 15 Pro</b></h5>
+                <i class="text-muted" style="font-size:0.85rem;">Apple Smartphone</i>
+                <p class="price mt-2">$1,099.99</p>
+                <a href="product.html" class="btn btn-primary btn-sm w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="product-card h-100">
+              <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=400&q=80" alt="PlayStation 5" />
+              <div class="p-3">
+                <span class="badge bg-info text-dark mb-1">Popular</span>
+                <h5><b>PlayStation 5</b></h5>
+                <i class="text-muted" style="font-size:0.85rem;">Sony Gaming Console</i>
+                <p class="price mt-2">$499.99</p>
+                <a href="product.html" class="btn btn-primary btn-sm w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- Bootstrap Table (task2 req) -->
+        <h3 class="mb-3">📊 Best-Sellers Overview</h3>
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered align-middle">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Supplier</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><b>Sony WH-1000XM5</b></td>
+                <td><span class="badge bg-secondary">Audio</span></td>
+                <td class="text-accent">$349.99</td>
+                <td>Sony Electronics</td>
+                <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><b>MacBook Pro 14" M3</b></td>
+                <td><span class="badge bg-secondary">Laptops</span></td>
+                <td class="text-accent">$1,999.99</td>
+                <td>Apple Inc.</td>
+                <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><b>iPhone 15 Pro</b></td>
+                <td><span class="badge bg-secondary">Smartphones</span></td>
+                <td class="text-accent">$1,099.99</td>
+                <td>Apple Inc.</td>
+                <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><b>Samsung Galaxy S24 Ultra</b></td>
+                <td><span class="badge bg-secondary">Smartphones</span></td>
+                <td class="text-accent">$1,199.99</td>
+                <td>Samsung Electronics</td>
+                <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><b>Sony PlayStation 5</b></td>
+                <td><span class="badge bg-secondary">Gaming</span></td>
+                <td class="text-accent">$499.99</td>
+                <td>Sony Electronics</td>
+                <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Why TechNova -->
+      <section class="mb-4">
+        <h2 class="mb-3">✅ Why TechNova?</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <ul class="check-list">
+              <li><b>Free Shipping</b> on all orders over <i>$50</i></li>
+              <li><b>2-Year Warranty</b> on all electronics</li>
+              <li><b>30-Day Returns</b> — <i>no questions asked</i></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="check-list">
+              <li><b>Genuine Products</b> from <i>authorized suppliers</i></li>
+              <li><b>24/7 Support</b> via chat, email and phone</li>
+              <li><b>Secure Checkout</b> — SSL encrypted</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER (task2 req) ===== -->
+  <footer class="py-4 mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="navbar-brand p-0" style="font-size:1.2rem;">Tech<span>Nova</span></h5>
+          <p>Your premier online electronics store. Quality products, fast shipping.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="text-white mb-2">Quick Links</h6>
+          <ul class="icon-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="add-item.html">Add Product</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="text-white mb-2">Data Files</h6>
+          <ul class="icon-list">
+            <li><a href="data/items.txt" target="_blank">items.txt</a></li>
+            <li><a href="data/suppliers.txt" target="_blank">suppliers.txt</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <p class="text-center mb-0">&copy; 2026 <b>TechNova</b>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
