@@ -5,38 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="TechNova - Your premier online electronics store." />
   <title>TechNova | Home</title>
-
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Custom Styles (dark theme override) -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<!-- onload() starts the clock, happy hour timer, and loads JSON products -->
+<body onload="initPage()">
 
-  <!-- ===== NAVBAR with Dropdown (task2 req) ===== -->
+  <!-- ===== NAVBAR with Dropdown ===== -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Tech<span>Nova</span></a>
-
-      <!-- Hamburger for small screens (Bootstrap Grid / responsive) -->
       <button class="navbar-toggler" type="button"
               data-bs-toggle="collapse" data-bs-target="#mainNav"
               aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" href="index.html">🏠 Home</a>
           </li>
-
-          <!-- Dropdown Menu (task2 req) -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button"
-               data-bs-toggle="dropdown" aria-expanded="false">
-              📦 Shop
-            </a>
+               data-bs-toggle="dropdown" aria-expanded="false">📦 Shop</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="category.html">💻 Laptops</a></li>
               <li><a class="dropdown-item" href="category.html">🎧 Audio</a></li>
@@ -47,31 +38,33 @@
               <li><a class="dropdown-item" href="category.html">All Categories</a></li>
             </ul>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">🔍 Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html">🖼️ Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="add-item.html">➕ Add Item</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="product.html">🔍 Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">🖼️ Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="add-item.html">➕ Add Item</a></li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">🎫 Membership</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ===== HERO — Bootstrap Grid ===== -->
+  <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-7">
           <h1 class="display-5 fw-bold mb-3">Next-Gen Tech<br /><span>at Your Fingertips</span></h1>
-          <p class="lead mb-4">Discover the latest laptops, smartphones, TVs, and gaming gear from the world's leading brands — all in one place.</p>
+          <p class="lead mb-3">Discover the latest laptops, smartphones, TVs, and gaming gear.</p>
+
+          <!-- DATE & TIME DISPLAY (Task 3 req 1) -->
+          <div id="live-datetime" class="mb-3"
+               style="font-size:0.95rem; color:var(--color-accent); font-weight:500;">
+            Loading date &amp; time...
+          </div>
+
           <div class="d-flex gap-2 flex-wrap">
             <a href="category.html" class="btn btn-primary">Shop Now</a>
             <a href="gallery.html" class="btn btn-outline-primary">View Gallery</a>
+            <a href="membership.html" class="btn btn-outline-primary">🎫 Membership</a>
           </div>
         </div>
       </div>
@@ -82,13 +75,12 @@
   <main class="py-4">
     <div class="container">
 
-      <!-- Bootstrap Alert (task2 req — custom alert appearance) -->
-      <div class="alert alert-info alert-dismissible fade show" role="alert">
-        🎉 Free shipping on all orders over <strong>$50</strong>! Limited time offer.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <!-- HAPPY HOUR COUNTDOWN (Task 3 req 2) -->
+      <div id="happy-hour-countdown" class="alert alert-info mb-4" role="alert">
+        Loading happy hour info...
       </div>
 
-      <!-- Data Links — Bootstrap row/col -->
+      <!-- Data Links -->
       <section class="mb-5">
         <h2 class="mb-3">📂 Store Data Files</h2>
         <div class="row g-3">
@@ -109,54 +101,34 @@
         </div>
       </section>
 
-      <!-- Categories — Bootstrap Grid -->
+      <!-- Categories -->
       <section class="mb-5">
         <h2 class="mb-3">🗂️ Product Categories</h2>
         <div class="row g-3">
           <div class="col-6 col-md-4 col-lg-2">
-            <a href="category.html" class="category-card">
-              <div class="icon">🎧</div>
-              <strong>Audio</strong>
-            </a>
+            <a href="category.html" class="category-card"><div class="icon">🎧</div><strong>Audio</strong></a>
           </div>
           <div class="col-6 col-md-4 col-lg-2">
-            <a href="category.html" class="category-card">
-              <div class="icon">📺</div>
-              <strong>TVs</strong>
-            </a>
+            <a href="category.html" class="category-card"><div class="icon">📺</div><strong>TVs</strong></a>
           </div>
           <div class="col-6 col-md-4 col-lg-2">
-            <a href="category.html" class="category-card">
-              <div class="icon">💻</div>
-              <strong>Laptops</strong>
-            </a>
+            <a href="category.html" class="category-card"><div class="icon">💻</div><strong>Laptops</strong></a>
           </div>
           <div class="col-6 col-md-4 col-lg-2">
-            <a href="category.html" class="category-card">
-              <div class="icon">📱</div>
-              <strong>Smartphones</strong>
-            </a>
+            <a href="category.html" class="category-card"><div class="icon">📱</div><strong>Smartphones</strong></a>
           </div>
           <div class="col-6 col-md-4 col-lg-2">
-            <a href="category.html" class="category-card">
-              <div class="icon">🖥️</div>
-              <strong>Tablets</strong>
-            </a>
+            <a href="category.html" class="category-card"><div class="icon">🖥️</div><strong>Tablets</strong></a>
           </div>
           <div class="col-6 col-md-4 col-lg-2">
-            <a href="category.html" class="category-card">
-              <div class="icon">🎮</div>
-              <strong>Gaming</strong>
-            </a>
+            <a href="category.html" class="category-card"><div class="icon">🎮</div><strong>Gaming</strong></a>
           </div>
         </div>
       </section>
 
-      <!-- Best Sellers — Bootstrap Grid + table -->
+      <!-- Best Sellers Cards -->
       <section class="mb-5">
         <h2 class="mb-3">🏆 Best-Selling Products</h2>
-
-        <!-- Products Grid -->
         <div class="row g-4 mb-4">
           <div class="col-sm-6 col-lg-3">
             <div class="product-card h-100">
@@ -210,60 +182,73 @@
 
         <hr />
 
-        <!-- Bootstrap Table (task2 req) -->
+        <!-- Best-Sellers Table -->
         <h3 class="mb-3">📊 Best-Sellers Overview</h3>
         <div class="table-responsive">
           <table class="table table-hover table-bordered align-middle">
             <thead>
               <tr>
-                <th>#</th>
-                <th>Product Name</th>
-                <th>Category</th>
-                <th>Price</th>
-                <th>Supplier</th>
-                <th>Details</th>
+                <th>#</th><th>Product</th><th>Category</th>
+                <th>Price</th><th>Supplier</th><th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>1</td>
-                <td><b>Sony WH-1000XM5</b></td>
+                <td>1</td><td><b>Sony WH-1000XM5</b></td>
                 <td><span class="badge bg-secondary">Audio</span></td>
-                <td class="text-accent">$349.99</td>
-                <td>Sony Electronics</td>
+                <td class="text-accent">$349.99</td><td>Sony Electronics</td>
                 <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
               </tr>
               <tr>
-                <td>2</td>
-                <td><b>MacBook Pro 14" M3</b></td>
+                <td>2</td><td><b>MacBook Pro 14" M3</b></td>
                 <td><span class="badge bg-secondary">Laptops</span></td>
-                <td class="text-accent">$1,999.99</td>
-                <td>Apple Inc.</td>
+                <td class="text-accent">$1,999.99</td><td>Apple Inc.</td>
                 <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
               </tr>
               <tr>
-                <td>3</td>
-                <td><b>iPhone 15 Pro</b></td>
+                <td>3</td><td><b>iPhone 15 Pro</b></td>
                 <td><span class="badge bg-secondary">Smartphones</span></td>
-                <td class="text-accent">$1,099.99</td>
-                <td>Apple Inc.</td>
+                <td class="text-accent">$1,099.99</td><td>Apple Inc.</td>
                 <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
               </tr>
               <tr>
-                <td>4</td>
-                <td><b>Samsung Galaxy S24 Ultra</b></td>
+                <td>4</td><td><b>Samsung Galaxy S24 Ultra</b></td>
                 <td><span class="badge bg-secondary">Smartphones</span></td>
-                <td class="text-accent">$1,199.99</td>
-                <td>Samsung Electronics</td>
+                <td class="text-accent">$1,199.99</td><td>Samsung Electronics</td>
                 <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
               </tr>
               <tr>
-                <td>5</td>
-                <td><b>Sony PlayStation 5</b></td>
+                <td>5</td><td><b>Sony PlayStation 5</b></td>
                 <td><span class="badge bg-secondary">Gaming</span></td>
-                <td class="text-accent">$499.99</td>
-                <td>Sony Electronics</td>
+                <td class="text-accent">$499.99</td><td>Sony Electronics</td>
                 <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- JSON PRODUCTS TABLE (Task 3 req 5,6,7 — loaded via onload → loadProductsFromJSON()) -->
+      <section class="mb-5">
+        <h2 class="mb-1">🗃️ All Products (Loaded from JSON)</h2>
+        <p class="mb-3" style="color:var(--color-muted);">This table is populated automatically from <code>data/products.json</code> every time the page loads.</p>
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered align-middle">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Supplier</th>
+                <th>Stock</th>
+                <th>Rating</th>
+                <th>Warranty</th>
+              </tr>
+            </thead>
+            <tbody id="products-table-body">
+              <tr>
+                <td colspan="8" class="text-center" style="color:var(--color-muted);">Loading products...</td>
               </tr>
             </tbody>
           </table>
@@ -294,13 +279,13 @@
     </div>
   </main>
 
-  <!-- ===== FOOTER (task2 req) ===== -->
+  <!-- ===== FOOTER ===== -->
   <footer class="py-4 mt-4">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-3">
           <h5 class="navbar-brand p-0" style="font-size:1.2rem;">Tech<span>Nova</span></h5>
-          <p>Your premier online electronics store. Quality products, fast shipping.</p>
+          <p>Your premier online electronics store.</p>
         </div>
         <div class="col-md-4 mb-3">
           <h6 class="text-white mb-2">Quick Links</h6>
@@ -309,6 +294,7 @@
             <li><a href="category.html">Shop</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="add-item.html">Add Product</a></li>
+            <li><a href="membership.html">Membership</a></li>
           </ul>
         </div>
         <div class="col-md-4 mb-3">
@@ -316,6 +302,7 @@
           <ul class="icon-list">
             <li><a href="data/items.txt" target="_blank">items.txt</a></li>
             <li><a href="data/suppliers.txt" target="_blank">suppliers.txt</a></li>
+            <li><a href="data/products.json" target="_blank">products.json</a></li>
           </ul>
         </div>
       </div>
@@ -324,7 +311,8 @@
     </div>
   </footer>
 
-  <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Task 3 JS -->
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,81 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sony WH-1000XM5",
+      "category": "Audio",
+      "price": 349.99,
+      "supplier": "Sony Electronics",
+      "stock": 42,
+      "rating": 4.8,
+      "warranty": "2 Years",
+      "date_added": "2026-03-15"
+    },
+    {
+      "id": 2,
+      "name": "Apple MacBook Pro 14\" M3",
+      "category": "Laptops",
+      "price": 1999.99,
+      "supplier": "Apple Inc.",
+      "stock": 23,
+      "rating": 4.9,
+      "warranty": "1 Year",
+      "date_added": "2026-03-22"
+    },
+    {
+      "id": 3,
+      "name": "iPhone 15 Pro",
+      "category": "Smartphones",
+      "price": 1099.99,
+      "supplier": "Apple Inc.",
+      "stock": 55,
+      "rating": 4.7,
+      "warranty": "1 Year",
+      "date_added": "2026-04-01"
+    },
+    {
+      "id": 4,
+      "name": "Samsung Galaxy S24 Ultra",
+      "category": "Smartphones",
+      "price": 1199.99,
+      "supplier": "Samsung Electronics",
+      "stock": 48,
+      "rating": 4.6,
+      "warranty": "1 Year",
+      "date_added": "2026-03-30"
+    },
+    {
+      "id": 5,
+      "name": "Sony PlayStation 5",
+      "category": "Gaming",
+      "price": 499.99,
+      "supplier": "Sony Electronics",
+      "stock": 35,
+      "rating": 4.9,
+      "warranty": "1 Year",
+      "date_added": "2026-04-02"
+    },
+    {
+      "id": 6,
+      "name": "Dell XPS 15",
+      "category": "Laptops",
+      "price": 1749.99,
+      "supplier": "Dell Technologies",
+      "stock": 17,
+      "rating": 4.5,
+      "warranty": "2 Years",
+      "date_added": "2026-03-05"
+    },
+    {
+      "id": 7,
+      "name": "LG C3 55\" OLED TV",
+      "category": "TVs",
+      "price": 999.99,
+      "supplier": "LG Electronics",
+      "stock": 9,
+      "rating": 4.8,
+      "warranty": "2 Years",
+      "date_added": "2026-03-10"
+    }
+  ]
+}

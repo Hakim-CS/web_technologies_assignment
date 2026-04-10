@@ -69,7 +69,8 @@
       <p class="lead mb-4">Fill in the form to add an item to the <b>TechNova</b> store. Fields marked <span class="text-danger">*</span> are required.</p>
 
       <!-- ===== FORM — Bootstrap Grid + Bootstrap form inputs ===== -->
-      <form id="add-product-form" novalidate>
+      <!-- onsubmit calls validateAddItemForm() from js/validation.js -->
+      <form id="add-product-form" novalidate onsubmit="event.preventDefault(); validateAddItemForm();">
         <div class="row g-3">
 
           <!-- Name + SKU -->
@@ -372,82 +373,19 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- External validation script (Task 3) -->
+  <script src="js/validation.js"></script>
   <script>
     // Rating slider live update
-    const ratingSlider = document.getElementById('productRating');
-    const ratingValue  = document.getElementById('ratingValue');
-    ratingSlider.addEventListener('input', () => { ratingValue.textContent = ratingSlider.value; });
+    var ratingSlider = document.getElementById('productRating');
+    var ratingValue  = document.getElementById('ratingValue');
+    ratingSlider.addEventListener('input', function() { ratingValue.textContent = ratingSlider.value; });
 
-    // Form validation
-    document.getElementById('add-product-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      let valid = true;
-
-      const successAlert = document.getElementById('successAlert');
-      const errorAlert   = document.getElementById('errorAlert');
-      successAlert.style.display = 'none';
-      errorAlert.style.display   = 'none';
-
-      function validate(id, errorId, condition) {
-        const field = document.getElementById(id);
-        const err   = document.getElementById(errorId);
-        if (!condition) {
-          field.classList.add('is-invalid');
-          if (err) err.style.display = 'block';
-          valid = false;
-        } else {
-          field.classList.remove('is-invalid');
-          if (err) err.style.display = 'none';
-        }
-      }
-
-      validate('productName', 'productNameError', document.getElementById('productName').value.trim() !== '');
-      validate('productSKU', 'productSKUError', document.getElementById('productSKU').value.trim() !== '');
-      validate('productDescription', 'productDescriptionError', document.getElementById('productDescription').value.trim().length >= 20);
-      const price = parseFloat(document.getElementById('productPrice').value);
-      validate('productPrice', 'productPriceError', !isNaN(price) && price > 0);
-      const stock = parseInt(document.getElementById('productStock').value);
-      validate('productStock', 'productStockError', !isNaN(stock) && stock >= 0);
-      validate('productCategory', 'productCategoryError', document.getElementById('productCategory').value !== '');
-      validate('productSupplier', 'productSupplierError', document.getElementById('productSupplier').value !== '');
-      validate('lastPurchaseDate', 'lastPurchaseDateError', document.getElementById('lastPurchaseDate').value !== '');
-
-      const email = document.getElementById('contactEmail').value.trim();
-      validate('contactEmail', 'contactEmailError', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email));
-
-      const url = document.getElementById('productURL').value.trim();
-      if (url) validate('productURL', 'productURLError', url.startsWith('http://') || url.startsWith('https://'));
-      else { document.getElementById('productURL').classList.remove('is-invalid'); document.getElementById('productURLError').style.display='none'; }
-
-      // Radio checks
-      const condition = document.querySelector('input[name="condition"]:checked');
-      document.getElementById('conditionError').style.display = condition ? 'none' : 'block';
-      if (!condition) valid = false;
-
-      const availability = document.querySelector('input[name="availability"]:checked');
-      document.getElementById('availabilityError').style.display = availability ? 'none' : 'block';
-      if (!availability) valid = false;
-
-      const terms = document.getElementById('termsCheck').checked;
-      document.getElementById('termsError').style.display = terms ? 'none' : 'block';
-      if (!terms) valid = false;
-
-      if (valid) {
-        successAlert.style.display = 'block';
-        successAlert.classList.add('show');
-        successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        this.reset();
-        ratingValue.textContent = '3';
-      } else {
-        errorAlert.style.display = 'block';
-        errorAlert.classList.add('show');
-        errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    });
+    // Validation is handled by js/validation.js → validateAddItemForm()
 
     // Reset clears validation states
-    document.getElementById('resetBtn').addEventListener('click', () => {
-      document.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+    document.getElementById('resetBtn').addEventListener('click', function() {
+      document.querySelectorAll('.is-invalid').forEach(function(el) { el.classList.remove('is-invalid'); });
       document.getElementById('conditionError').style.display = 'none';
       document.getElementById('availabilityError').style.display = 'none';
       document.getElementById('termsError').style.display = 'none';
