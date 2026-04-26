@@ -1,0 +1,12 @@
+{
+  "name": "technova-store",
+  "version": "1.0.0",
+  "description": "TechNova online store — Node.js backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

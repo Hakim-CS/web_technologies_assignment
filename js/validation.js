@@ -172,12 +172,18 @@ function validateAddItemForm() {
 
   // --- Result ---
   if (valid) {
-    successAlert.style.display = 'block';
-    successAlert.classList.add('show');
-    successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    document.getElementById('add-product-form').reset();
-    var rv = document.getElementById('ratingValue');
-    if (rv) rv.textContent = '3';
+    // Task 4: if onValidationSuccess() is defined on the page, call it (sends POST to server)
+    // Otherwise fall back to local success display
+    if (typeof onValidationSuccess === 'function') {
+      onValidationSuccess();
+    } else {
+      successAlert.style.display = 'block';
+      successAlert.classList.add('show');
+      successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      document.getElementById('add-product-form').reset();
+      var rv = document.getElementById('ratingValue');
+      if (rv) rv.textContent = '3';
+    }
   } else {
     errorAlert.style.display = 'block';
     errorAlert.classList.add('show');
