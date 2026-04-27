@@ -112,7 +112,7 @@ function loadProducts() {
 /* Render products array into the table body */
 function renderProductTable(products, tableBody) {
   if (!products || products.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="8" class="text-center text-muted">No products found.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="9" class="text-center text-muted">No products found.</td></tr>';
     return;
   }
 
@@ -142,6 +142,7 @@ function renderProductTable(products, tableBody) {
     + '<td>' + stockBadge + '</td>'
     + '<td style="color:#f59e0b;">' + stars + ' <small>(' + (p.rating || 0) + ')</small></td>'
     + '<td>' + (p.warranty || '—') + '</td>'
+    + '<td><a href="product.html?id=' + p.id + '" class="btn btn-sm btn-outline-primary">View →</a></td>'
     + '</tr>';
   }
 }

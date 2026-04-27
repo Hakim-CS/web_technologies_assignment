@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your shopping cart at TechNova Store." />
+  <title>TechNova | Shopping Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Tech<span>Nova</span></a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">🏠 Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">📦 Shop</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="category.html">💻 Laptops</a></li>
+              <li><a class="dropdown-item" href="category.html">🎧 Audio</a></li>
+              <li><a class="dropdown-item" href="category.html">📱 Smartphones</a></li>
+              <li><a class="dropdown-item" href="category.html">📺 TVs</a></li>
+              <li><a class="dropdown-item" href="category.html">🎮 Gaming</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="category.html">All Categories</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="product.html">🔍 Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">🖼️ Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="add-item.html">➕ Add Item</a></li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">🎫 Membership</a></li>
+          <li class="nav-item d-flex align-items-center ms-2">
+            <a class="nav-link position-relative active" href="cart.html" title="Shopping Cart">🛒
+              <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.65rem; display:none;">0</span>
+            </a>
+          </li>
+          <li class="nav-item d-flex align-items-center ms-2" id="nav-auth"></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main class="py-4">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">🛒 Shopping Cart</li>
+        </ol>
+      </nav>
+
+      <h1 class="mb-1">🛒 Shopping Cart</h1>
+      <p class="lead mb-4">Review items in your cart before checkout.</p>
+
+      <!-- Cart Content (populated by JS) -->
+      <div id="cart-content"></div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="navbar-brand p-0" style="font-size:1.2rem;">Tech<span>Nova</span></h5>
+          <p>Your premier online electronics store.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="text-white mb-2">Quick Links</h6>
+          <ul class="icon-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="membership.html">Membership</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="text-white mb-2">Data Files</h6>
+          <ul class="icon-list">
+            <li><a href="data/items.txt" target="_blank">items.txt</a></li>
+            <li><a href="data/suppliers.txt" target="_blank">suppliers.txt</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <p class="text-center mb-0">&copy; 2026 <b>TechNova</b>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    /*
+     * Cart Page — reads cart from sessionStorage and renders it
+     */
+
+    function renderCart() {
+      var cart = getCart();
+      var container = document.getElementById('cart-content');
+
+      if (cart.length === 0) {
+        container.innerHTML =
+          '<div class="text-center py-5">'
+        + '<div style="font-size:4rem;">🛒</div>'
+        + '<h3 class="text-white mt-3">Your cart is empty</h3>'
+        + '<p class="text-muted">Browse our products and add items to your cart.</p>'
+        + '<a href="index.html" class="btn btn-primary mt-2">🏠 Browse Products</a>'
+        + '</div>';
+        return;
+      }
+
+      // Calculate totals
+      var subtotal = 0;
+      for (var i = 0; i < cart.length; i++) {
+        subtotal += cart[i].price * cart[i].qty;
+      }
+      var shipping = subtotal >= 50 ? 0 : 9.99;
+      var total = subtotal + shipping;
+
+      // Build cart table
+      var rows = '';
+      for (var j = 0; j < cart.length; j++) {
+        var item = cart[j];
+        var itemTotal = (item.price * item.qty).toFixed(2);
+        rows +=
+          '<tr>'
+        + '<td>'
+        +   '<div class="d-flex align-items-center gap-3">'
+        +     '<div>'
+        +       '<b>' + item.name + '</b><br/>'
+        +       '<small class="text-muted">ID: #' + item.id + '</small>'
+        +     '</div>'
+        +   '</div>'
+        + '</td>'
+        + '<td style="color:var(--color-accent); font-weight:700;">$' + parseFloat(item.price).toFixed(2) + '</td>'
+        + '<td>'
+        +   '<div class="d-flex align-items-center gap-2">'
+        +     '<button class="btn btn-sm btn-outline-primary" onclick="changeQty(' + j + ', -1)" style="width:32px; height:32px; padding:0;">−</button>'
+        +     '<span style="min-width:28px; text-align:center; font-weight:600;">' + item.qty + '</span>'
+        +     '<button class="btn btn-sm btn-outline-primary" onclick="changeQty(' + j + ', 1)" style="width:32px; height:32px; padding:0;">+</button>'
+        +   '</div>'
+        + '</td>'
+        + '<td style="color:var(--color-accent); font-weight:700;">$' + itemTotal + '</td>'
+        + '<td>'
+        +   '<button class="btn btn-sm btn-outline-danger" onclick="removeItem(' + j + ')" title="Remove item">✕</button>'
+        + '</td>'
+        + '</tr>';
+      }
+
+      container.innerHTML =
+        '<div class="row g-4">'
+        // Cart items table
+      + '<div class="col-lg-8">'
+      + '<div class="card p-0">'
+      + '<div class="table-responsive">'
+      + '<table class="table table-hover align-middle mb-0">'
+      + '<thead><tr>'
+      + '<th>Product</th><th>Price</th><th>Quantity</th><th>Total</th><th></th>'
+      + '</tr></thead>'
+      + '<tbody>' + rows + '</tbody>'
+      + '</table></div></div>'
+      + '<div class="mt-3">'
+      + '<button class="btn btn-outline-danger btn-sm" onclick="clearCart()">🗑️ Clear Cart</button>'
+      + ' <a href="index.html" class="btn btn-outline-primary btn-sm">← Continue Shopping</a>'
+      + '</div>'
+      + '</div>'
+        // Order summary
+      + '<div class="col-lg-4">'
+      + '<div class="card p-4">'
+      + '<h4 class="text-white mb-3">📋 Order Summary</h4>'
+      + '<div class="d-flex justify-content-between mb-2"><span>Subtotal (' + getCartCount() + ' items)</span><span style="color:var(--color-text);">$' + subtotal.toFixed(2) + '</span></div>'
+      + '<div class="d-flex justify-content-between mb-2"><span>Shipping</span><span style="color:var(--color-text);">' + (shipping === 0 ? '<span class="text-success">FREE</span>' : '$' + shipping.toFixed(2)) + '</span></div>'
+      + (shipping === 0 ? '<small class="text-success mb-2 d-block">✔ Free shipping on orders over $50</small>' : '<small class="text-muted mb-2 d-block">Free shipping on orders over $50</small>')
+      + '<hr />'
+      + '<div class="d-flex justify-content-between mb-3" style="font-size:1.2rem;"><b class="text-white">Total</b><b style="color:var(--color-accent);">$' + total.toFixed(2) + '</b></div>'
+      + '<button class="btn btn-primary w-100" onclick="alert(\'Checkout coming soon! Thank you for shopping at TechNova. 🛍️\')">💳 Proceed to Checkout</button>'
+      + '</div></div>'
+      + '</div>';
+    }
+
+    // Change quantity of an item
+    function changeQty(index, delta) {
+      var cart = getCart();
+      if (index < 0 || index >= cart.length) return;
+
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+
+      saveCart(cart);
+      updateCartBadge();
+      renderCart();
+    }
+
+    // Remove an item from the cart
+    function removeItem(index) {
+      var cart = getCart();
+      if (index < 0 || index >= cart.length) return;
+
+      cart.splice(index, 1);
+      saveCart(cart);
+      updateCartBadge();
+      renderCart();
+    }
+
+    // Clear entire cart
+    function clearCart() {
+      if (confirm('Are you sure you want to clear your cart?')) {
+        saveCart([]);
+        updateCartBadge();
+        renderCart();
+      }
+    }
+
+    // Initialize
+    initAuth();
+    renderCart();
+  </script>
+</body>
+</html>

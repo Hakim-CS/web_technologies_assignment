@@ -9,7 +9,16 @@
       "stock": 42,
       "rating": 4.8,
       "warranty": "2 Years",
-      "date_added": "2026-03-15"
+      "date_added": "2026-03-15",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700&q=80",
+      "description": "The Sony WH-1000XM5 are the flagship noise-cancelling headphones from Sony, setting the industry benchmark for audio quality. With 8 microphones and AI-powered dual noise sensor technology, they block out everything around you.",
+      "features": [
+        "Industry-leading noise cancellation",
+        "30 hours battery life (with NC on)",
+        "Multipoint connection — connect two devices at once",
+        "LDAC high-resolution audio support",
+        "Foldable design with premium carrying case"
+      ]
     },
     {
       "id": 2,
@@ -20,7 +29,16 @@
       "stock": 23,
       "rating": 4.9,
       "warranty": "1 Year",
-      "date_added": "2026-03-22"
+      "date_added": "2026-03-22",
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=700&q=80",
+      "description": "The MacBook Pro 14-inch with M3 chip delivers breakthrough performance for pros. With up to 18 hours of battery life, a stunning Liquid Retina XDR display, and the power of Apple Silicon, it handles everything from coding to 4K video editing.",
+      "features": [
+        "Apple M3 chip with 10-core GPU",
+        "18GB unified memory, 512GB SSD",
+        "14.2-inch Liquid Retina XDR display",
+        "Up to 18 hours battery life",
+        "MagSafe charging, HDMI, SD card slot"
+      ]
     },
     {
       "id": 3,
@@ -31,7 +49,16 @@
       "stock": 55,
       "rating": 4.7,
       "warranty": "1 Year",
-      "date_added": "2026-04-01"
+      "date_added": "2026-04-01",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=700&q=80",
+      "description": "iPhone 15 Pro features a titanium design, the A17 Pro chip — the most powerful chip ever in a smartphone — and a customizable Action button. With a 48MP main camera and USB-C, it's the ultimate pro device.",
+      "features": [
+        "A17 Pro chip — fastest mobile processor",
+        "48MP main camera with 5x optical zoom",
+        "Titanium design, lightest Pro ever",
+        "USB-C with USB 3 speeds",
+        "Action button for quick access"
+      ]
     },
     {
       "id": 4,
@@ -42,7 +69,16 @@
       "stock": 48,
       "rating": 4.6,
       "warranty": "1 Year",
-      "date_added": "2026-03-30"
+      "date_added": "2026-03-30",
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=700&q=80",
+      "description": "The Samsung Galaxy S24 Ultra brings Galaxy AI to your pocket. With a built-in S Pen, a 200MP camera, and a titanium frame, it's the most powerful Galaxy smartphone ever made.",
+      "features": [
+        "Snapdragon 8 Gen 3 for Galaxy",
+        "200MP main camera with AI processing",
+        "Built-in S Pen with AI features",
+        "6.8-inch Dynamic AMOLED 2X display",
+        "5000mAh battery with 45W fast charging"
+      ]
     },
     {
       "id": 5,
@@ -53,7 +89,16 @@
       "stock": 35,
       "rating": 4.9,
       "warranty": "1 Year",
-      "date_added": "2026-04-02"
+      "date_added": "2026-04-02",
+      "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=700&q=80",
+      "description": "Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, and a new generation of incredible PlayStation games with the Sony PlayStation 5.",
+      "features": [
+        "Custom AMD Zen 2 CPU, RDNA 2 GPU",
+        "825GB ultra-high speed SSD",
+        "4K gaming at up to 120fps",
+        "DualSense controller with haptic feedback",
+        "Ray tracing for stunning visuals"
+      ]
     },
     {
       "id": 6,
@@ -64,7 +109,16 @@
       "stock": 17,
       "rating": 4.5,
       "warranty": "2 Years",
-      "date_added": "2026-03-05"
+      "date_added": "2026-03-05",
+      "image": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=700&q=80",
+      "description": "The Dell XPS 15 combines a stunning InfinityEdge display with powerful Intel Core i9 processing. Designed for creators and professionals, it features a premium aluminum chassis and all-day battery life.",
+      "features": [
+        "Intel Core i9-13900H processor",
+        "32GB DDR5 RAM, 1TB NVMe SSD",
+        "15.6-inch 3.5K OLED InfinityEdge display",
+        "NVIDIA GeForce RTX 4060 graphics",
+        "Thunderbolt 4 connectivity"
+      ]
     },
     {
       "id": 7,
@@ -75,7 +129,16 @@
       "stock": 9,
       "rating": 4.8,
       "warranty": "2 Years",
-      "date_added": "2026-03-10"
+      "date_added": "2026-03-10",
+      "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=700&q=80",
+      "description": "The LG C3 OLED TV delivers perfect blacks, infinite contrast, and over a billion colors. With the α9 Gen6 AI Processor 4K, it optimizes every scene for a breathtaking viewing experience.",
+      "features": [
+        "55-inch OLED evo panel with self-lit pixels",
+        "α9 Gen6 AI Processor 4K",
+        "Dolby Vision, Dolby Atmos, HDR10",
+        "4 HDMI 2.1 ports for 4K@120Hz gaming",
+        "webOS 23 with built-in streaming apps"
+      ]
     }
   ]
 }

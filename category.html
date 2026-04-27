@@ -38,6 +38,13 @@
           <li class="nav-item"><a class="nav-link" href="product.html">🔍 Product</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">🖼️ Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="add-item.html">➕ Add Item</a></li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">🎫 Membership</a></li>
+          <li class="nav-item d-flex align-items-center ms-2">
+            <a class="nav-link position-relative" href="cart.html" title="Shopping Cart">🛒
+              <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.65rem; display:none;">0</span>
+            </a>
+          </li>
+          <li class="nav-item d-flex align-items-center ms-2" id="nav-auth"></li>
         </ul>
       </div>
     </div>
@@ -94,7 +101,7 @@
                     <h5><b>MacBook Pro 14" M3</b></h5>
                     <i class="text-muted" style="font-size:0.85rem;">Apple Silicon · 18GB · 512GB</i>
                     <p class="price mt-2">$1,999.99</p>
-                    <a href="product.html" class="btn btn-primary btn-sm w-100">View Details</a>
+                    <a href="product.html?id=2" class="btn btn-primary btn-sm w-100">View Details</a>
                   </div>
                 </div>
               </div>
@@ -106,7 +113,7 @@
                     <h5><b>Dell XPS 15</b></h5>
                     <i class="text-muted" style="font-size:0.85rem;">Intel i9 · 32GB · 1TB</i>
                     <p class="price mt-2">$1,749.99</p>
-                    <a href="product.html" class="btn btn-primary btn-sm w-100">View Details</a>
+                    <a href="product.html?id=6" class="btn btn-primary btn-sm w-100">View Details</a>
                   </div>
                 </div>
               </div>
@@ -118,7 +125,7 @@
                     <h5><b>ASUS ROG Strix G16</b></h5>
                     <i class="text-muted" style="font-size:0.85rem;">RTX 4080 · 32GB · 1TB</i>
                     <p class="price mt-2">$1,499.99</p>
-                    <a href="product.html" class="btn btn-primary btn-sm w-100">View Details</a>
+                    <a href="product.html?id=7" class="btn btn-primary btn-sm w-100">View Details</a>
                   </div>
                 </div>
               </div>
@@ -148,7 +155,7 @@
                     <td>18 GB</td>
                     <td class="text-accent">$1,999.99</td>
                     <td>Apple Inc.</td>
-                    <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+                    <td><a href="product.html?id=2" class="btn btn-sm btn-outline-primary">View →</a></td>
                   </tr>
                   <tr>
                     <td>6</td>
@@ -157,7 +164,7 @@
                     <td>32 GB</td>
                     <td class="text-accent">$1,749.99</td>
                     <td>Dell Technologies</td>
-                    <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+                    <td><a href="product.html?id=6" class="btn btn-sm btn-outline-primary">View →</a></td>
                   </tr>
                   <tr>
                     <td>7</td>
@@ -166,7 +173,7 @@
                     <td>32 GB</td>
                     <td class="text-accent">$1,499.99</td>
                     <td>ASUS Computer</td>
-                    <td><a href="product.html" class="btn btn-sm btn-outline-primary">View →</a></td>
+                    <td><a href="product.html?id=7" class="btn btn-sm btn-outline-primary">View →</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -234,5 +241,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script>initAuth();</script>
 </body>
 </html>

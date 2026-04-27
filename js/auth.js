@@ -74,8 +74,15 @@ function saveCart(cart) {
   sessionStorage.setItem('cart', JSON.stringify(cart));
 }
 
-/* Add a product to the cart */
+/* Add a product to the cart (requires login) */
 function addToCart(productName, productPrice, productId) {
+  // Check if user is logged in
+  var userId = sessionStorage.getItem('userId');
+  if (!userId) {
+    showLoginRequiredToast();
+    return;
+  }
+
   var cart = getCart();
 
   // Check if product already in cart — if so, increment quantity
@@ -150,6 +157,34 @@ function showCartToast(productName) {
     toast.style.transition = 'opacity 0.3s ease';
     setTimeout(function() { toast.remove(); }, 300);
   }, 2500);
+}
+
+/* Show toast prompting user to log in before adding to cart */
+function showLoginRequiredToast() {
+  // Remove existing toast if any
+  var existing = document.getElementById('cart-toast');
+  if (existing) existing.remove();
+
+  var toast = document.createElement('div');
+  toast.id = 'cart-toast';
+  toast.style.cssText =
+    'position:fixed; bottom:24px; right:24px; z-index:9999;'
+  + 'background:linear-gradient(135deg, #f59e0b 0%, #d97706 100%);'
+  + 'color:#fff; padding:14px 24px; border-radius:12px;'
+  + 'font-weight:600; font-size:0.95rem;'
+  + 'box-shadow:0 8px 32px rgba(0,0,0,0.4);'
+  + 'display:flex; align-items:center; gap:8px;';
+  toast.innerHTML =
+    '🔒 <span>Please <a href="login.html" style="color:#fff; text-decoration:underline; font-weight:700;">log in</a> to add items to your cart.</span>';
+
+  document.body.appendChild(toast);
+
+  // Auto-remove after 4 seconds
+  setTimeout(function() {
+    toast.style.opacity = '0';
+    toast.style.transition = 'opacity 0.3s ease';
+    setTimeout(function() { toast.remove(); }, 300);
+  }, 4000);
 }
 
 /* ============================================================
